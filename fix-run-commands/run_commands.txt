@@ -1,0 +1,66 @@
+# ============================================================================
+# My Custom Win+R Commands Configuration
+# ============================================================================
+# This file contains your personalized Win+R commands.
+# Edit this file to add/remove commands, then run the populate script.
+#
+# FORMAT: One command per line, no quotes needed
+# Empty lines and lines starting with # are ignored
+# ============================================================================
+
+# System Management
+cmd
+powershell
+regedit
+msconfig
+services.msc
+devmgmt.msc
+diskmgmt.msc
+taskmgr
+
+# Control Panel
+control
+appwiz.cpl
+desk.cpl
+ncpa.cpl
+sysdm.cpl
+
+# Common Tools
+calc
+notepad
+mspaint
+charmap
+winver
+dxdiag
+
+# Network Commands
+ipconfig
+ping google.com
+netstat -an
+
+# Navigation
+.
+..
+explorer
+shell:startup
+shell:desktop
+shell:downloads
+temp
+%appdata%
+
+# ============================================================================
+# ADD YOUR CUSTOM COMMANDS BELOW THIS LINE
+# ============================================================================
+
+# Your Development Tools
+codex
+# git
+# python
+
+# Your Custom Paths
+# C:\java\utils\myUtils
+# D:\Projects
+# C:\Program Files\Notepad++\notepad++.exe
+
+# Your Frequent Commands
+# (add whatever commands you use most often)
