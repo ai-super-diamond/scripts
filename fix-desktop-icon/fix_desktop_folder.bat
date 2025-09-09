@@ -8,13 +8,12 @@ echo Desktop Folder Fix Script
 echo ========================================
 echo.
 
-REM Check if running as administrator
-net session >nul 2>&1
-if %errorLevel% neq 0 (
-    echo ERROR: This script must be run as Administrator!
-    echo Right-click and select "Run as administrator"
-    pause
-    exit /b 1
+REM Ensure the script runs elevated (UAC)
+>nul 2>&1 fltmc
+if errorlevel 1 (
+  echo Elevation required. Prompting for UAC...
+  powershell -nol -nop -ep Bypass -c "saps -v RunAs $env:ComSpec '/c','"%~f0" %*" -work '%~dp0'"
+  exit /b
 )
 
 echo Running as Administrator... Good!
